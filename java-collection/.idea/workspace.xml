@@ -4,7 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9a1ef526-c4f3-4679-8cef-292bd4403100" name="Changes" comment="" />
+    <list default="true" id="1b09ca24-4dc9-4017-ad79-b6a6a70c8742" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/stream/Desafio00.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/stream/Desafio01.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/stream/Desafio02.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/stream/Desafio03.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/stream/Desafio04.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/stream/Desafio05.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/stream/Desafio06.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/stream/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-stream/streamAPI/Desafio1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-stream/streamAPI/Desafio2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-stream/streamAPI/Desafio3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-stream/streamAPI/Desafio4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-stream/streamAPI/Desafio5.class" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,50 +48,58 @@
   }
 }]]></component>
   <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
+  "associatedIndex": 1
 }]]></component>
-  <component name="ProjectId" id="2v7qsEeiOT8ASvzMyP52LsOro4x" />
+  <component name="ProjectId" id="2vEKpCUcVAbILmYGxQPK1F8V3Ta" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.Desafio1.executor": "Run",
-    "Application.Desafio2.executor": "Run",
-    "Application.Desafio3.executor": "Run",
-    "Application.Desafio4.executor": "Run",
+    "Application.Desafio01.executor": "Run",
+    "Application.Desafio02.executor": "Debug",
+    "Application.Desafio03.executor": "Run",
+    "Application.Desafio04.executor": "Run",
+    "Application.Desafio05.executor": "Run",
+    "Application.Desafio06.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/sn1097270/Desktop/GitHub Igor",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.sourceCode.Java",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="stream" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.25659.59" />
-        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.25659.59" />
+        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.22562.218" />
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-IU-243.22562.218" />
       </set>
     </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="9a1ef526-c4f3-4679-8cef-292bd4403100" name="Changes" comment="" />
-      <created>1737461424867</created>
+      <changelist id="1b09ca24-4dc9-4017-ad79-b6a6a70c8742" name="Changes" comment="" />
+      <created>1743704978086</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1737461424867</updated>
-      <workItem from="1743506681832" duration="2433000" />
+      <updated>1743704978086</updated>
+      <workItem from="1743704979316" duration="1493000" />
     </task>
     <servers />
   </component>
