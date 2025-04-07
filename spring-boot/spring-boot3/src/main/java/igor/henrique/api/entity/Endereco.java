@@ -3,7 +3,6 @@ package igor.henrique.api.entity;
 import igor.henrique.api.dto.DadosEnderecoDTO;
 import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;
-import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
