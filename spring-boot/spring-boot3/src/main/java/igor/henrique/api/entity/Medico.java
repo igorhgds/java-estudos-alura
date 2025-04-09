@@ -1,8 +1,8 @@
 package igor.henrique.api.entity;
 
-import igor.henrique.api.dto.AtualizacaoMedicoDTO;
-import igor.henrique.api.dto.CadastroMedicoDTO;
-import igor.henrique.api.medico.Especialidade;
+import igor.henrique.api.dto.medico.AtualizacaoMedicoDTO;
+import igor.henrique.api.dto.medico.CadastroMedicoDTO;
+import igor.henrique.api.dto.medico.Especialidade;
 import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;

@@ -1,14 +1,13 @@
 package igor.henrique.api.entity;
 
-import igor.henrique.api.dto.AtualizacaoPacienteDTO;
-import igor.henrique.api.dto.CadastroPacienteDTO;
+import igor.henrique.api.dto.paciente.AtualizacaoPacienteDTO;
+import igor.henrique.api.dto.paciente.CadastroPacienteDTO;
 import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;

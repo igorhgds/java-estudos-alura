@@ -1,4 +1,4 @@
-package igor.henrique.api.dto;
+package igor.henrique.api.dto.paciente;
 
 import igor.henrique.api.entity.Paciente;
 

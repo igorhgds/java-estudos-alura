@@ -1,9 +1,8 @@
 package igor.henrique.api.controller;
 
-import igor.henrique.api.dto.AtualizacaoMedicoDTO;
-import igor.henrique.api.dto.AtualizacaoPacienteDTO;
-import igor.henrique.api.dto.CadastroPacienteDTO;
-import igor.henrique.api.dto.ListagemPacienteDTO;
+import igor.henrique.api.dto.paciente.AtualizacaoPacienteDTO;
+import igor.henrique.api.dto.paciente.CadastroPacienteDTO;
+import igor.henrique.api.dto.paciente.ListagemPacienteDTO;
 import igor.henrique.api.entity.Paciente;
 import igor.henrique.api.repository.PacienteRepository;
 import jakarta.validation.Valid;

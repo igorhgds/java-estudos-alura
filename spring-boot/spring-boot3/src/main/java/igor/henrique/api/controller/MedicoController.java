@@ -1,8 +1,8 @@
 package igor.henrique.api.controller;
 
-import igor.henrique.api.dto.AtualizacaoMedicoDTO;
-import igor.henrique.api.dto.CadastroMedicoDTO;
-import igor.henrique.api.dto.ListagemMedicosDTO;
+import igor.henrique.api.dto.medico.AtualizacaoMedicoDTO;
+import igor.henrique.api.dto.medico.CadastroMedicoDTO;
+import igor.henrique.api.dto.medico.ListagemMedicosDTO;
 import igor.henrique.api.entity.Medico;
 import igor.henrique.api.repository.MedicoRepository;
 import jakarta.validation.Valid;
@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 

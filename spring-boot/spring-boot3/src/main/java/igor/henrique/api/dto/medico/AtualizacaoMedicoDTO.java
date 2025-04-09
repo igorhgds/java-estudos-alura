@@ -1,5 +1,6 @@
-package igor.henrique.api.dto;
+package igor.henrique.api.dto.medico;
 
+import igor.henrique.api.dto.DadosEnderecoDTO;
 import jakarta.validation.constraints.NotNull;
 
 public record AtualizacaoMedicoDTO(
