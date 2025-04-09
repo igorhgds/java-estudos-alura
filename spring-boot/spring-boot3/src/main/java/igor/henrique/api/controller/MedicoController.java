@@ -1,5 +1,6 @@
 package igor.henrique.api.controller;
 
+import igor.henrique.api.dto.AtualizacaoMedicoDTO;
 import igor.henrique.api.dto.CadastroMedicoDTO;
 import igor.henrique.api.dto.ListagemMedicosDTO;
 import igor.henrique.api.entity.Medico;
@@ -12,6 +13,7 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -33,5 +35,12 @@ public class MedicoController {
     @GetMapping
     public Page<ListagemMedicosDTO> listar(@PageableDefault(size = 5, sort = "nome") Pageable paginacao){
         return repository.findAll(paginacao).map(ListagemMedicosDTO::new);
+    }
+
+    @PutMapping
+    @Transactional
+    public void atualizar(@RequestBody @Valid AtualizacaoMedicoDTO dados){
+        var medico = repository.getReferenceById(dados.id());
+        medico.atualizarInformacoes(dados);
     }
 }
