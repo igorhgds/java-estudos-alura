@@ -2,6 +2,7 @@ package igor.henrique.api.controller;
 
 import igor.henrique.api.dto.medico.AtualizacaoMedicoDTO;
 import igor.henrique.api.dto.medico.CadastroMedicoDTO;
+import igor.henrique.api.dto.medico.DadosDetalhamentoMedicoDTO;
 import igor.henrique.api.dto.medico.ListagemMedicosDTO;
 import igor.henrique.api.entity.Medico;
 import igor.henrique.api.repository.MedicoRepository;
@@ -31,20 +32,26 @@ public class MedicoController {
 
     @PostMapping
     @Transactional
-    public void cadastrar(@RequestBody @Valid CadastroMedicoDTO dados){
+    public ResponseEntity cadastrar(@RequestBody @Valid CadastroMedicoDTO dados){
         repository.save(new Medico(dados));
+
+        return ResponseEntity.noContent().build();
     }
 
     @GetMapping
-    public Page<ListagemMedicosDTO> listar(@PageableDefault(size = 5, sort = "nome") Pageable paginacao){
-        return repository.findAllByAtivoTrue(paginacao).map(ListagemMedicosDTO::new);
+    public ResponseEntity<Page<ListagemMedicosDTO>> listar(@PageableDefault(size = 5, sort = "nome") Pageable paginacao){
+        var page = repository.findAllByAtivoTrue(paginacao).map(ListagemMedicosDTO::new);
+
+        return ResponseEntity.ok(page);
     }
 
     @PutMapping
     @Transactional
-    public void atualizar(@RequestBody @Valid AtualizacaoMedicoDTO dados){
+    public ResponseEntity atualizar(@RequestBody @Valid AtualizacaoMedicoDTO dados){
         var medico = repository.getReferenceById(dados.id());
         medico.atualizarInformacoes(dados);
+
+        return ResponseEntity.ok(new DadosDetalhamentoMedicoDTO(medico));
     }
 
     @DeleteMapping("/{id}")
