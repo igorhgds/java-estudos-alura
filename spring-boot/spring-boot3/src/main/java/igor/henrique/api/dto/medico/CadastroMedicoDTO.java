@@ -1,6 +1,7 @@
 package igor.henrique.api.dto.medico;
 
 import igor.henrique.api.dto.DadosEnderecoDTO;
+import igor.henrique.api.enums.Especialidade;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;

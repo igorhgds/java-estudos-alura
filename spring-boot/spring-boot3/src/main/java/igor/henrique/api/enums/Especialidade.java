@@ -1,4 +1,4 @@
-package igor.henrique.api.dto.medico;
+package igor.henrique.api.enums;
 
 public enum Especialidade {
 
