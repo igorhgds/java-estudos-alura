@@ -1,4 +1,4 @@
-package igor.henrique.api.infra;
+package igor.henrique.api.infra.exception;
 
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.http.ResponseEntity;
