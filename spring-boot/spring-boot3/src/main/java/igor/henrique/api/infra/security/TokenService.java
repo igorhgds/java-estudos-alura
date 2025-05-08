@@ -10,12 +10,11 @@ import org.springframework.stereotype.Service;
 import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;
-import java.util.Date;
 
 @Service
 public class TokenService {
 
-    @Value("{api.security.token.secret}")
+    @Value("${api.security.token.secret}")
     private String secret;
 
     public String gerarToken(Usuario usuario) {
