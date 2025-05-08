@@ -31,12 +31,10 @@ public class SecurityFilter extends OncePerRequestFilter {
         var usuario = usuarioRepository.findByLogin(subject);
 
         var authentication = new UsernamePasswordAuthenticationToken(usuario, null, usuario.getAuthorities());
-
         SecurityContextHolder.getContext().setAuthentication(authentication);
         }
 
         filterChain.doFilter(request, response); //habilita chamar o próximo filtro
-
     }
 
     private String recuperarToken(HttpServletRequest request) {
