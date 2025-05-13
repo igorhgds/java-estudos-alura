@@ -1,5 +1,6 @@
 package igor.henrique.api.dto.consulta;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.validation.constraints.Future;
 import jakarta.validation.constraints.NotNull;
 
@@ -13,5 +14,6 @@ public record DadosAgendamentoConsultaDTO (
 
         @NotNull
         @Future
+        //@JsonFormat(pattern = "dd/MM/yyyy HH:mm")
         LocalDateTime data){
 }
