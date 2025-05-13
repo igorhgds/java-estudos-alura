@@ -2,11 +2,13 @@ package igor.henrique.api.service.validacoes;
 
 import igor.henrique.api.dto.consulta.DadosAgendamentoConsultaDTO;
 import igor.henrique.api.infra.exception.ValidacaoException;
+import org.springframework.stereotype.Component;
 
 import java.time.Duration;
 import java.time.LocalDate;
 
-public class ValidadorHorarioAntecedencia {
+@Component
+public class ValidadorHorarioAntecedencia implements ValidadorAgendamentoDeConsulta{
 
     public void validar(DadosAgendamentoConsultaDTO dados) {
         var dataConsulta = dados.data();
