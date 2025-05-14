@@ -6,6 +6,7 @@ import igor.henrique.api.dto.medico.DadosDetalhamentoMedicoDTO;
 import igor.henrique.api.dto.medico.ListagemMedicosDTO;
 import igor.henrique.api.entity.Medico;
 import igor.henrique.api.repository.MedicoRepository;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -26,6 +27,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 @RestController
 @RequestMapping("/medicos")
+@SecurityRequirement(name = "bearer-key")
 public class MedicoController {
 
     @Autowired
