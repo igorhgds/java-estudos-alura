@@ -2,6 +2,7 @@ package igor.henrique.api.service;
 
 import igor.henrique.api.dto.consulta.DadosAgendamentoConsultaDTO;
 import igor.henrique.api.dto.consulta.DadosCancelamentoConsultaDTO;
+import igor.henrique.api.dto.consulta.DadosDetalhamentoConsultaDTO;
 import igor.henrique.api.entity.Consulta;
 import igor.henrique.api.entity.Medico;
 import igor.henrique.api.infra.exception.ValidacaoException;
@@ -29,7 +30,7 @@ public class AgendaDeConsultas {
     @Autowired
     private List<ValidadorAgendamentoDeConsulta> validadores;
 
-    public void agendar(DadosAgendamentoConsultaDTO dados) {
+    public DadosDetalhamentoConsultaDTO agendar(DadosAgendamentoConsultaDTO dados) {
         if (!pacienteRepository.existsById(dados.idPaciente())){
             throw new ValidacaoException("Id do paciente informado não existe!");
         }
@@ -42,8 +43,14 @@ public class AgendaDeConsultas {
 
         var paciente = pacienteRepository.getReferenceById(dados.idPaciente());
         var medico = escolherMedico(dados);
+        if (medico == null){
+            throw new ValidacaoException("Não existe médico disponível nesta data!");
+        }
+
         var consulta = new Consulta(null, medico, paciente, dados.data(), null);;
         consultaRepository.save(consulta);
+
+        return new DadosDetalhamentoConsultaDTO(consulta);
     }
 
     private Medico escolherMedico(DadosAgendamentoConsultaDTO dados) {
