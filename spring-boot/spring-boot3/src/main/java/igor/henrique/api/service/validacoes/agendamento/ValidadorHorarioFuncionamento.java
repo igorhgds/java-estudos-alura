@@ -1,4 +1,4 @@
-package igor.henrique.api.service.validacoes;
+package igor.henrique.api.service.validacoes.agendamento;
 
 import igor.henrique.api.dto.consulta.DadosAgendamentoConsultaDTO;
 import igor.henrique.api.infra.exception.ValidacaoException;
@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 import java.time.DayOfWeek;
 
 @Component
-public class ValidadorHorarioFuncionamento implements ValidadorAgendamentoDeConsulta{
+public class ValidadorHorarioFuncionamento implements ValidadorAgendamentoDeConsulta {
 
     public void validar(DadosAgendamentoConsultaDTO dados) {
 

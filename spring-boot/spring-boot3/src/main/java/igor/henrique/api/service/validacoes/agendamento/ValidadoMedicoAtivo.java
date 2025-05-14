@@ -1,4 +1,4 @@
-package igor.henrique.api.service.validacoes;
+package igor.henrique.api.service.validacoes.agendamento;
 
 import igor.henrique.api.dto.consulta.DadosAgendamentoConsultaDTO;
 import igor.henrique.api.infra.exception.ValidacaoException;

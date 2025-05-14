@@ -9,7 +9,8 @@ import igor.henrique.api.infra.exception.ValidacaoException;
 import igor.henrique.api.repository.ConsultaRepository;
 import igor.henrique.api.repository.MedicoRepository;
 import igor.henrique.api.repository.PacienteRepository;
-import igor.henrique.api.service.validacoes.ValidadorAgendamentoDeConsulta;
+import igor.henrique.api.service.validacoes.agendamento.ValidadorAgendamentoDeConsulta;
+import igor.henrique.api.service.validacoes.cancelamento.ValidadorCancelamentoDeConsulta;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -29,6 +30,9 @@ public class AgendaDeConsultas {
 
     @Autowired
     private List<ValidadorAgendamentoDeConsulta> validadores;
+
+    @Autowired
+    private List<ValidadorCancelamentoDeConsulta> validadoresCancelamento;
 
     public DadosDetalhamentoConsultaDTO agendar(DadosAgendamentoConsultaDTO dados) {
         if (!pacienteRepository.existsById(dados.idPaciente())){
@@ -67,6 +71,8 @@ public class AgendaDeConsultas {
         if (!consultaRepository.existsById(dados.idConsulta())) {
             throw new ValidacaoException("Id da consulta informado não existe!");
         }
+
+        validadoresCancelamento.forEach(v -> v.validar(dados));
 
         var consulta = consultaRepository.getReferenceById(dados.idConsulta());
         consulta.cancelar(dados.motivo());

@@ -1,4 +1,4 @@
-package igor.henrique.api.service.validacoes;
+package igor.henrique.api.service.validacoes.agendamento;
 
 import igor.henrique.api.dto.consulta.DadosAgendamentoConsultaDTO;
 import igor.henrique.api.infra.exception.ValidacaoException;
@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-public class ValidadorPacienteSemOutraConsultaNoDia implements ValidadorAgendamentoDeConsulta{
+public class ValidadorPacienteSemOutraConsultaNoDia implements ValidadorAgendamentoDeConsulta {
 
     @Autowired
     private ConsultaRepository consultaRepository;
