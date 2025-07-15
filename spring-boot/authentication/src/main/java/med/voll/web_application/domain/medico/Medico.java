@@ -7,7 +7,6 @@ import jakarta.persistence.*;
 public class Medico {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
     private String email;
@@ -16,10 +15,10 @@ public class Medico {
     @Enumerated(EnumType.STRING)
     private Especialidade especialidade;
 
-    @Deprecated
     public Medico(){}
 
-    public Medico(DadosCadastroMedico dados) {
+    public Medico(Long id, DadosCadastroMedico dados) {
+        this.id = id;
         atualizarDados(dados);
     }
 
