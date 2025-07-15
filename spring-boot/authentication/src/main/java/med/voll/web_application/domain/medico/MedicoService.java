@@ -13,7 +13,6 @@ import java.util.List;
 public class MedicoService {
 
     private final MedicoRepository repository;
-
     private final UsuarioService usuarioService;
 
     public MedicoService(MedicoRepository repository, UsuarioService usuarioService) {
