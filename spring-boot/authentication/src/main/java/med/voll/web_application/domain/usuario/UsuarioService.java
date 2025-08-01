@@ -70,4 +70,24 @@ public class UsuarioService implements UserDetailsService {
 
         emailService.enviarEmailSenha(usuario);
     }
+
+    public void recuperarConta(String codigo, DadosRecuperacaoConta dados) {
+        Usuario usuario = usuarioRepository.findByTokenIgnoreCase(codigo)
+                .orElseThrow(() -> new RegraDeNegocioException("Link inválido!"));
+
+        if(usuario.getExpiracaoToken().isBefore(LocalDateTime.now())) {
+            throw new RegraDeNegocioException("Link expirado! Solicite um novo link.");
+        }
+
+        if(!dados.novaSenha().equals(dados.novaSenhaConfirmacao())) {
+            throw new RegraDeNegocioException("Senha e confirmação de senha não conferem!");
+        }
+
+        String senhaCriptografada = passwordEncoder.encode(dados.novaSenha());
+        usuario.alterarSenha(senhaCriptografada);
+
+        usuario.setToken(null);
+        usuario.setExpiracaoToken(null);
+        usuarioRepository.save(usuario);
+    }
 }
