@@ -3,6 +3,7 @@ package br.com.alura.service;
 import br.com.alura.client.ClientHttpConfiguration;
 import br.com.alura.domain.Abrigo;
 import br.com.alura.domain.Pet;
+import br.com.alura.domain.TipoPet;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
@@ -45,7 +46,7 @@ public class PetService {
         System.out.println("Pets cadastrados:");
         for (Pet pet : abrigoList) {
             Long id = pet.getId();
-            String tipo = pet.getTipo();
+            String tipo = pet.getTipo().name();
             String nome = pet.getNome();
             String raca = pet.getRaca();
             int idade = pet.getIdade();
@@ -69,7 +70,7 @@ public class PetService {
         String line;
         while ((line = reader.readLine()) != null) {
             String[] campos = line.split(",");
-            String tipo = campos[0];
+            TipoPet tipo = TipoPet.valueOf(campos[0]);
             String nome = campos[1];
             String raca = campos[2];
             int idade = Integer.parseInt(campos[3]);
