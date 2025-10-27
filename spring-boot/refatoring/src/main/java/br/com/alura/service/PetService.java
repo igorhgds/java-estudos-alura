@@ -1,23 +1,13 @@
 package br.com.alura.service;
 
 import br.com.alura.client.ClientHttpConfiguration;
-import br.com.alura.domain.Abrigo;
 import br.com.alura.domain.Pet;
 import br.com.alura.domain.TipoPet;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.net.http.HttpResponse;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class PetService {
 

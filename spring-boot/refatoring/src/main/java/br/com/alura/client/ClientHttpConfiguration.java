@@ -1,13 +1,10 @@
 package br.com.alura.client;
 
 import com.google.gson.Gson;
-import com.google.gson.JsonObject;
 
 import java.io.IOException;
 import java.net.URI;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
+import java.net.http.*;
 
 public class ClientHttpConfiguration {
     public HttpResponse<String> dispararRequisicaoGet(String uri) throws IOException, InterruptedException {
