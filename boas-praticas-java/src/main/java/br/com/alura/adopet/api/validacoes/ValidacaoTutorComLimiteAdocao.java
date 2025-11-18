@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 @Component
-public class ValidacaoTutorComLimiteAdocao {
+public class ValidacaoTutorComLimiteAdocao implements ValidacaoSolicitacaoAdocao{
 
     @Autowired
     private AdocaoRepository adocaoRepository;
